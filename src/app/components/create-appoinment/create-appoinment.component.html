@@ -1,0 +1,26 @@
+<div class="card bg-light">
+    <div class="card-body">
+        <h5 class="card-title text-center">Add Appointment</h5>
+        <div *ngIf="formIncorrect" class="text-center">
+            <span class="badge rounded-pill bg-danger">Complete all the fields!</span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input type="text" id="name" [(ngModel)]="name" class="form-control" placeholder="Enter your name">
+        </div>
+        <div class="form-group mb-3">
+            <label for="date">Date</label>
+            <input type="date" id="date" [(ngModel)]="date" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="hour">Hour</label>
+            <input type="time" id="hour" [(ngModel)]="hour" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="sympton">Symptom</label>
+            <textarea id="sympton" [(ngModel)]="sympton" rows="3" class="form-control" placeholder="Enter sympton"></textarea>
+        </div>
+        <button style="width: 100%;" class="btn btn-primary btn-block" (click)="addAppointment()">ADD</button>
+    </div>
+</div>
